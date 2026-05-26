@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=MedievalSharp&display=swap');
+
+:root {
+    --gold: #d4af37;
+    --blood-red: #8b0000;
+    --stone-dark: #1a1a1a;
+    --stone-light: #333333;
+    --magic-blue: #00d4ff; /* Cor do Leviathan Axe */
+    --text-color: #e0d0b0; /* Bege envelhecido */
+}
+
+body {
+    background-color: #0c0c0c;
+    /* Adicionando um degradê que lembra cinzas e névoa */
+    background-image: 
+        radial-gradient(circle at center, rgba(139, 0, 0, 0.05) 0%, transparent 70%),
+        linear-gradient(to bottom, #0c0c0c, #1a1a1a);
+    color: var(--text-color);
+    font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Título Épico */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-shadow: 3px 3px 0px #000, 0 0 20px rgba(212, 175, 55, 0.4);
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    border-bottom: 2px solid var(--blood-red);
+    padding-bottom: 10px;
+}
+
+/* Container de Input */
+label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="number"] {
+    background: #222;
+    border: 2px solid var(--stone-light);
+    border-radius: 0;
+    padding: 12px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px #000;
+}
+
+input[type="number"]:focus {
+    border-color: var(--magic-blue);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Botão de Fúria (Spartan Rage) */
+button {
+    background: linear-gradient(135deg, var(--blood-red) 0%, #4a0000 100%);
+    color: white;
+    border: 2px solid var(--gold);
+    padding: 15px 30px;
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.2s transform;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: var(--blood-red);
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Área do Resultado (Painel Rúnico) */
+#resultadotabuada {
+    margin-top: 40px;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border: 3px double var(--stone-light);
+    min-width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+/* Simulando cantos ornamentados */
+#resultadotabuada::before {
+    content: "ᛟ"; /* Runa nórdica */
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    padding: 0 10px;
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--stone-light);
+    padding-bottom: 10px;
+}
+
+p {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.4rem;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+
+p:hover {
+    color: var(--magic-blue);
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}
+
+/* Scrollbar estilo pedra */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0c0c0c;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--stone-light);
+    border: 1px solid var(--gold);
+}
